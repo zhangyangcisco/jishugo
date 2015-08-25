@@ -7,5 +7,15 @@ from app import app
 @app.route('/index')
 
 def index():
-    return "Hello World!"
+    user = {'nicename':'zhangyang'}
+    return '''
+<html>
+  <head>
+    <title> Home page </title>
+  </head>
+  <body>
+    <h1> hello, %s </h1>
+  </body>
+</html> ''' % (user['nicename'])
+
 
